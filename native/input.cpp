@@ -484,7 +484,7 @@ void ApplyBinds(SDL_Gamepad* pad, Pad& p,
 
 #ifdef __ANDROID__
 // MostWantedActivity: the loose controller's buttons, sticks and triggers, and its letting go when the app loses the focus
-extern "C" JNIEXPORT void JNICALL Java_com_racas_mostwanted_MostWantedActivity_nativeLooseKey(JNIEnv*, jclass, jint code,
+extern "C" JNIEXPORT void JNICALL Java_com_p4z8n1vr_nfsmw_MostWantedActivity_nativeLooseKey(JNIEnv*, jclass, jint code,
                                                                                      jboolean down) {
     // every button kept, a generic controller's BUTTON_1 to 16 too: the CONTROLLER page can bind them
     if (code < 0 || code >= kLooseCodes) return;
@@ -493,7 +493,7 @@ extern "C" JNIEXPORT void JNICALL Java_com_racas_mostwanted_MostWantedActivity_n
     g_loose.keys[size_t(code)] = down;
 }
 
-extern "C" JNIEXPORT void JNICALL Java_com_racas_mostwanted_MostWantedActivity_nativeLooseAxes(JNIEnv*, jclass, jfloat lx,
+extern "C" JNIEXPORT void JNICALL Java_com_p4z8n1vr_nfsmw_MostWantedActivity_nativeLooseAxes(JNIEnv*, jclass, jfloat lx,
                                                                                       jfloat ly, jfloat rx, jfloat ry,
                                                                                       jfloat lt, jfloat rt, jfloat hx,
                                                                                       jfloat hy) {
@@ -503,7 +503,7 @@ extern "C" JNIEXPORT void JNICALL Java_com_racas_mostwanted_MostWantedActivity_n
     g_loose.lt = lt, g_loose.rt = rt, g_loose.hx = hx, g_loose.hy = hy;
 }
 
-extern "C" JNIEXPORT void JNICALL Java_com_racas_mostwanted_MostWantedActivity_nativeLooseRelease(JNIEnv*, jclass) {
+extern "C" JNIEXPORT void JNICALL Java_com_p4z8n1vr_nfsmw_MostWantedActivity_nativeLooseRelease(JNIEnv*, jclass) {
     std::lock_guard lock(g_loose_lock);
     bool seen = g_loose.seen;
     g_loose = {};

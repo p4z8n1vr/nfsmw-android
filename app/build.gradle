@@ -17,7 +17,7 @@ tasks.register("fetchSDL") {
 preBuild.dependsOn "fetchSDL"
 
 android {
-    namespace = "com.racas.mostwanted"
+    namespace = "com.p4z8n1vr.nfsmw"
     compileSdk {
         version = release(37) {
             minorApiLevel = 2
@@ -26,8 +26,8 @@ android {
     ndkVersion = "30.0.16248370"
 
     defaultConfig {
-        applicationId = "com.racas.mostwanted"
-        minSdk = 29
+        applicationId = "com.p4z8n1vr.nfsmw"
+        minSdk = 33
         targetSdk = 37
         // -PversionCode=<n> -PversionName=<name>: the release workflow sets them from the tag
         versionCode = project.hasProperty("versionCode") ? project.versionCode.toInteger() : 1

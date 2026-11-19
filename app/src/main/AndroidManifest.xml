@@ -55,7 +55,7 @@
             android:roundIcon="@mipmap/ic_mods"
             android:exported="true"
             android:process=":mods"
-            android:taskAffinity="com.racas.mostwanted.mods"
+            android:taskAffinity="com.p4z8n1vr.nfsmw.mods"
             android:launchMode="singleTop"
             android:theme="@android:style/Theme.Material.NoActionBar"
             android:configChanges="orientation|screenSize|screenLayout|smallestScreenSize|keyboard|keyboardHidden">

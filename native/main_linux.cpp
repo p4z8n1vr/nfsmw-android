@@ -487,7 +487,7 @@ int main(int, char**) {
     LOGR("app: log %s", logx::Path().c_str());
 
     std::string title = Utf8(app::kGame.title);
-    SDL_SetAppMetadata(title.c_str(), nullptr, "com.racas.mostwanted");
+    SDL_SetAppMetadata(title.c_str(), nullptr, "com.p4z8n1vr.nfsmw");
     // a touch screen's touches are the touch controls' and FEng's, not a mouse; the mouse is not a touch
     SDL_SetHint(SDL_HINT_TOUCH_MOUSE_EVENTS, "0");
     SDL_SetHint(SDL_HINT_MOUSE_TOUCH_EVENTS, "0");
