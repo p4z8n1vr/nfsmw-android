@@ -25,7 +25,7 @@ class UpdateChecker private constructor() {
     }
 
     companion object {
-        const val REPO = "RanggaCasper/MostWanted-Android"
+        const val REPO = "p4z8n1vr/nfsmw-android"
 
         private const val LATEST =
             "https://api.github.com/repos/$REPO/releases/latest"
